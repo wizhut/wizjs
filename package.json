@@ -1,0 +1,11 @@
+{
+  "name": "wizjs",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "tap": "21.0.1"
+  }
+}
