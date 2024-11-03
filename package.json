@@ -7,7 +7,7 @@
   },
   "description": "Simple but useful hacks for everyday javascript programming",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap run"
   },
   "repository": {
     "type": "git",
