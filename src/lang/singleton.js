@@ -1,3 +1,4 @@
+const { isNil } = require('./checks.js');
 
 
 const instances = {};
@@ -11,11 +12,11 @@ function addSingleton(name, fn) {
 
 
 async function getInstance(name){
-    if (instances[name] !== undefined) {
+    if (!isNil(instances[name])) {
         return instances[name];
     }
 
-    if (wrappers[name] === undefined) {
+    if (isNil(wrappers[name])) {
         return null;
     }
 
