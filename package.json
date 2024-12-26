@@ -1,6 +1,6 @@
 {
   "name": "@wizhut_tech/wizjs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "devDependencies": {
     "tap": "21.0.1"
