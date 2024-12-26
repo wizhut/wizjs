@@ -6,7 +6,7 @@ const wrappers = {};
 
 
 
-function addSingleton(name, fn) {
+function singleton(name, fn) {
     wrappers[name] = fn;
 }
 
@@ -30,6 +30,6 @@ async function getInstance(name){
 
 
 module.exports = {
-    addSingleton,
+    singleton,
     getInstance
 }
