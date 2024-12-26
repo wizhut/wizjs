@@ -1,6 +1,6 @@
 # Wizjs
 
-A Javascript library (a few selected dependencies only) that contains utilities for enjoy-full every day programming.
+A Javascript library (a few selected dependencies only) that contains utilities for enjoy-full every day programming. No, this library will not become another `lodash` :).
 
 ### Language
 
@@ -11,4 +11,3 @@ A Javascript library (a few selected dependencies only) that contains utilities 
 ### Math
 
 * Numbers ... [documentation](docs/math_numbers.md)
-
