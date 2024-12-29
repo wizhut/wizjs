@@ -1,8 +1,6 @@
 # Lang / Singleton
 
-Import with `require('wizjs/lang/singleton.js')`. In-memory caching of an async function's result, ensuring that it will be called only once.
-
-Mimics similar python decorators. It can easily, be used to store class instance variables.
+In-memory caching of an async function's result, ensuring that it will be called only once. Mimics similar python decorators. It can easily, be used to store class instance variables.
 
 ### Module API
 
