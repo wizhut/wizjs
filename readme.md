@@ -4,10 +4,10 @@ A Javascript library (a few selected dependencies only) that contains utilities 
 
 ### Language
 
-* Checks ... [documentation](docs/lang_checks.md)
-* Flow ... [documentation](docs/lang_flow.md)
-* Singleton ... [documentation](docs/lang_singleton.md)
+* **Check** utility functions ... [[docs](docs/lang_checks.md)]
+* Control-**Flow** utilities ... [[docs](docs/lang_flow.md)]
+* **Singleton** hack ... [[docs](docs/lang_singleton.md)]
 
 ### Math
 
-* Numbers ... [documentation](docs/math_numbers.md)
+* Utilities around **numbers** ... [[docs](docs/math_numbers.md)]
