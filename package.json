@@ -3,7 +3,7 @@
   "version": "0.0.6",
   "main": "index.js",
   "devDependencies": {
-    "tap": "21.0.1"
+    "tap": "21.0.2"
   },
   "description": "Simple but useful hacks for everyday javascript programming",
   "scripts": {
