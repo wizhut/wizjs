@@ -9,6 +9,7 @@ Use by importing:
 ```
 {
     lang: {
+        arrays: [functions],
         checks: [functions],
         singleton: [functions],
         functools: [functions]
@@ -21,6 +22,7 @@ Use by importing:
 
 ### Language
 
+* **Arrays** utility functions ... [[docs](docs/lang_arrays.md)]
 * **Check** utility functions ... [[docs](docs/lang_checks.md)]
 * Control-**Flow** utilities ... [[docs](docs/lang_flow.md)] -- *still in development* --
 * **functools** ... [[docs](docs/lang_functools.md)]
