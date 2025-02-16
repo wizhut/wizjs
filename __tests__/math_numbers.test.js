@@ -9,5 +9,6 @@ t.test('numbers/toInteger', (t) => {
     t.equal(toInteger(1.0), 1);
     t.equal(toInteger('1'), 1);
     t.equal(toInteger(1), 1);
+    t.equal(toInteger('abcde'), 0);
     t.end();
 });

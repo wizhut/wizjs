@@ -7,7 +7,13 @@ function toInteger(num) {
     }
 
     try {
-        return parseInt(num, 10);
+        const r = parseInt(num, 10);
+
+        if (isNaN(r)) {
+            return 0;
+        }
+
+        return r;
     } catch (e) {
         return 0;
     }
