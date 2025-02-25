@@ -8,6 +8,9 @@ Use by importing:
 
 ```
 {
+    io: {
+        files: [functions]
+    },
     lang: {
         arrays: [functions],
         checks: [functions],
@@ -19,6 +22,14 @@ Use by importing:
     }
 }
 ```
+
+You can also import individual functions like the following:
+
+`const { lang: { checks : { isNil } } }  = require('@wizhut_tech/wizjs');`
+
+### I/O
+
+* **Files** utility functions ... [[docs](docs/io_files.md)]
 
 ### Language
 
