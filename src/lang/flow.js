@@ -1,17 +1,15 @@
 
 
-class TransactionItem {
-    constructor(task, fallback) {
-        this.task = task;
-        this.fallback = fallback;
-    }
-
-    async execute() {
-        
+function if_exception(fn, fn_noexc, fn_exc) {
+    try {
+        fn();
+        fn_noexc();
+    } catch (error) {
+        fn_exc(error);
     }
 }
 
 
 module.exports = {
-
+    if_exception
 };

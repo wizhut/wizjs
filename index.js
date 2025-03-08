@@ -5,6 +5,8 @@ const functools = require('./src/lang/functools.js');
 const arrays = require('./src/lang/arrays.js');
 const files = require('./src/io/files.js');
 
+const { BadlyInitializedError } = require('./src/internal/exceptions.js');
+
 
 module.exports = {
     io: {
@@ -18,5 +20,8 @@ module.exports = {
     },
     math: {
         numbers: numbers
+    },
+    exceptions: {
+        BadlyInitializedError
     }
 }

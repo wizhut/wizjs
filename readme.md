@@ -14,6 +14,7 @@ Use by importing:
     lang: {
         arrays: [functions],
         checks: [functions],
+        flow: [functions],
         singleton: [functions],
         functools: [functions]
     },
@@ -23,7 +24,7 @@ Use by importing:
 }
 ```
 
-You can also import individual functions like the following:
+You can also import individual functions like the following snippet:
 
 `const { lang: { checks : { isNil } } }  = require('@wizhut_tech/wizjs');`
 
@@ -35,8 +36,9 @@ You can also import individual functions like the following:
 
 * **Arrays** utility functions ... [[docs](docs/lang_arrays.md)]
 * **Check** utility functions ... [[docs](docs/lang_checks.md)]
-* Control-**Flow** utilities ... [[docs](docs/lang_flow.md)] -- *still in development* --
+* Control-**Flow** utilities ... [[docs](docs/lang_flow.md)]
 * **functools** ... [[docs](docs/lang_functools.md)]
+* **itertools** ... [[docs](docs/lang_itertools.md)]
 * **Singleton** hack ... [[docs](docs/lang_singleton.md)]
 
 ### Math
