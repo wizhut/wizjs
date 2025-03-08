@@ -4,6 +4,8 @@ const numbers = require('./src/math/numbers.js');
 const functools = require('./src/lang/functools.js');
 const arrays = require('./src/lang/arrays.js');
 const files = require('./src/io/files.js');
+const flow = require('./src/lang/flow.js');
+const itertools = require('./src/lang/itertools.js');
 
 const { BadlyInitializedError } = require('./src/internal/exceptions.js');
 
@@ -15,8 +17,10 @@ module.exports = {
     lang: {
         arrays: arrays,
         singleton: singleton,
+        flow: flow,
         checks: checks,
-        functools: functools
+        functools: functools,
+        itertools: itertools
     },
     math: {
         numbers: numbers

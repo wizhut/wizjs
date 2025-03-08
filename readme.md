@@ -16,7 +16,8 @@ Use by importing:
         checks: [functions],
         flow: [functions],
         singleton: [functions],
-        functools: [functions]
+        functools: [functions],
+        itertools: [functions]
     },
     math: {
         numbers: [functions]
@@ -44,3 +45,7 @@ You can also import individual functions like the following snippet:
 ### Math
 
 * Utilities around **numbers** ... [[docs](docs/math_numbers.md)]
+
+## Contact
+
+This library is actively developed and maintained by [wizhut.tech](http://wizhut.tech)
