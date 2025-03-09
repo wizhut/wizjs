@@ -2,7 +2,7 @@
 const {toInteger} = require("../math/numbers");
 
 
-function* cycle(start=0, step=1) {
+function* count(start=0, step=1) {
     let iCount = toInteger(start);
     const iStep = toInteger(step);
 
@@ -12,14 +12,14 @@ function* cycle(start=0, step=1) {
     }
 }
 
-function fn_cycle(start, fn, step=1) {
-    const cycleGenerator = cycle(start, step);
+function fn_count(start, fn, step=1) {
+    const countGenerator = count(start, step);
 
-    while (fn(cycleGenerator.next().value)) { }
+    while (fn(countGenerator.next().value)) { }
 }
 
 
 module.exports = {
-    cycle,
-    fn_cycle
+    count,
+    fn_count
 };
