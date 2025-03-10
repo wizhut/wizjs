@@ -1,6 +1,6 @@
 const t = require('tap');
 
-const { count, fn_count } = require('../src/lang/itertools.js');
+const { count, repeat } = require('../src/lang/itertools.js');
 
 
 t.test('itertools/count', (t) => {
@@ -16,6 +16,21 @@ t.test('itertools/count', (t) => {
     t.equal(genTwo.next().value, 0.5);
     t.equal(genTwo.next().value, 1);
     t.equal(genTwo.next().value, 1.5);
+
+    t.end();
+});
+
+
+t.test('itertools/repeat', (t) => {
+    // single repeat
+    const repeatGen = repeat(10, 1);
+    t.equal(repeatGen.next().value, 10);
+    t.equal(repeatGen.return().done, true);
+
+    // eternal repeat
+    const repeatGenTwo = repeat(15, 0);
+    t.equal(repeatGenTwo.next().value, 15);
+    t.equal(repeatGenTwo.next().value, 15);
 
     t.end();
 });
