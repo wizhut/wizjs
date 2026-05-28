@@ -32,5 +32,11 @@ t.test('itertools/repeat', (t) => {
     t.equal(repeatGenTwo.next().value, 15);
     t.equal(repeatGenTwo.next().value, 15);
 
+    // negative times is clamped to 0, i.e. behaves like eternal repeat
+    const repeatGenThree = repeat(7, -3);
+    t.equal(repeatGenThree.next().value, 7);
+    t.equal(repeatGenThree.next().value, 7);
+    t.equal(repeatGenThree.return().done, true);
+
     t.end();
 });

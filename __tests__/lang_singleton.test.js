@@ -21,3 +21,21 @@ t.test('singleton/simple-tests', async (t) => {
 
     t.end();
 });
+
+
+t.test('singleton/caches-instance', async (t) => {
+    // the wrapper must run once; later calls return the cached instance
+    let calls = 0;
+    singleton('counter-wrapper', async () => {
+        calls += 1;
+        return { id: calls };
+    });
+
+    const first = await getInstance('counter-wrapper');
+    const second = await getInstance('counter-wrapper');
+
+    t.equal(calls, 1);
+    t.equal(first, second);
+
+    t.end();
+});
