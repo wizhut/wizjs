@@ -1,28 +1,28 @@
 {
-  "name": "@wizhut_tech/wizjs",
-  "version": "0.1.4",
-  "main": "index.js",
+  "author": "vassilios.karakoidas@wizhut.tech",
+  "bugs": {
+    "url": "https://github.com/wizhut/wizjs/issues"
+  },
+  "description": "Simple but useful hacks for everyday javascript programming",
   "devDependencies": {
     "tap": "21.7.4"
   },
-  "description": "Simple but useful hacks for everyday javascript programming",
-  "scripts": {
-    "test": "tap run"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wizhut/wizjs.git"
-  },
+  "homepage": "https://github.com/wizhut/wizjs#readme",
   "keywords": [
     "javascript",
     "programming",
     "library",
     "utilities"
   ],
-  "author": "vassilios.karakoidas@wizhut.tech",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/wizhut/wizjs/issues"
+  "main": "index.js",
+  "name": "@wizhut_tech/wizjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wizhut/wizjs.git"
   },
-  "homepage": "https://github.com/wizhut/wizjs#readme"
+  "scripts": {
+    "test": "tap run"
+  },
+  "version": "0.1.5"
 }
