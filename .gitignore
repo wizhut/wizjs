@@ -1,3 +1,10 @@
 node_modules
 .idea
 .tap
+# Credentials — never commit
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
