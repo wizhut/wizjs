@@ -1,6 +1,6 @@
 # Wizjs
 
-A Javascript library (a few selected dependencies only) that contains utilities for enjoy-full every day programming. No, this library will not become another `lodash` :).
+A Javascript library that ports selected Python idioms and stdlib helpers (`itertools`, `functools`, `collections`) to everyday JS. A few selected dependencies only. No, this library will not become another `lodash` :).
 
 Use by importing:
 
@@ -17,7 +17,9 @@ Use by importing:
         flow: [functions],
         singleton: [functions],
         functools: [functions],
-        itertools: [functions]
+        itertools: [functions],
+        objects: [functions],
+        collections: [functions]
     },
     math: {
         numbers: [functions]
@@ -40,6 +42,8 @@ You can also import individual functions like the following snippet:
 * Control-**Flow** utilities ... [[docs](docs/lang_flow.md)]
 * **functools** ... [[docs](docs/lang_functools.md)]
 * **itertools** ... [[docs](docs/lang_itertools.md)]
+* **Objects** utility functions ... [[docs](docs/lang_objects.md)]
+* **collections** (`Counter`, `DefaultDict`) ... [[docs](docs/lang_collections.md)]
 * **Singleton** hack ... [[docs](docs/lang_singleton.md)]
 
 ### Math

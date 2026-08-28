@@ -1,6 +1,6 @@
 const t = require('tap');
 
-const { isNil, isArray, isObject, isNumber, isString } = require('../src/lang/checks.js');
+const { isNil, isArray, isObject, isNumber, isString, isBoolean, isFunction, isInteger, isEmpty } = require('../src/lang/checks.js');
 
 
 
@@ -53,4 +53,65 @@ t.test('checks/isString', (t) => {
     t.equal(isString(1.1), false);
     t.equal(isString('misc'), true);
     t.end();
-})
+});
+
+t.test('checks/isBoolean', (t) => {
+    t.equal(isBoolean(true), true);
+    t.equal(isBoolean(false), true);
+    t.equal(isBoolean(null), false);
+    t.equal(isBoolean(undefined), false);
+    t.equal(isBoolean(0), false);
+    t.equal(isBoolean(1), false);
+    t.equal(isBoolean('true'), false);
+    t.equal(isBoolean({}), false);
+    t.end();
+});
+
+t.test('checks/isFunction', (t) => {
+    t.equal(isFunction(function () {}), true);
+    t.equal(isFunction(() => 1), true);
+    t.equal(isFunction(async () => 1), true);
+    t.equal(isFunction(function* () {}), true);
+    t.equal(isFunction(class Foo {}), true);
+    t.equal(isFunction(null), false);
+    t.equal(isFunction(undefined), false);
+    t.equal(isFunction(1), false);
+    t.equal(isFunction('fn'), false);
+    t.equal(isFunction({}), false);
+    t.end();
+});
+
+t.test('checks/isInteger', (t) => {
+    t.equal(isInteger(1), true);
+    t.equal(isInteger(0), true);
+    t.equal(isInteger(-4), true);
+    t.equal(isInteger(1.0), true);
+    t.equal(isInteger(1.1), false);
+    t.equal(isInteger(NaN), false);
+    t.equal(isInteger(Infinity), false);
+    t.equal(isInteger('1'), false);
+    t.equal(isInteger(null), false);
+    t.equal(isInteger(undefined), false);
+    t.equal(isInteger(true), false);
+    t.end();
+});
+
+t.test('checks/isEmpty', (t) => {
+    t.equal(isEmpty(null), true);
+    t.equal(isEmpty(undefined), true);
+    t.equal(isEmpty(''), true);
+    t.equal(isEmpty([]), true);
+    t.equal(isEmpty({}), true);
+    t.equal(isEmpty(new Map()), true);
+    t.equal(isEmpty(new Set()), true);
+
+    t.equal(isEmpty(' '), false);
+    t.equal(isEmpty([0]), false);
+    t.equal(isEmpty({ a: 1 }), false);
+    t.equal(isEmpty(new Map([['a', 1]])), false);
+    t.equal(isEmpty(new Set([1])), false);
+    t.equal(isEmpty(0), false);
+    t.equal(isEmpty(false), false);
+    t.equal(isEmpty(() => {}), false);
+    t.end();
+});
