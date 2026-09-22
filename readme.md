@@ -2,9 +2,20 @@
 
 A Javascript library that ports selected Python idioms and stdlib helpers (`itertools`, `functools`, `collections`) to everyday JS. A few selected dependencies only. No, this library will not become another `lodash` :).
 
-Use by importing:
+Use by importing the area you need:
 
-`const wizjs = require('@wizhut_tech/wizjs')`. Returns an object structured like:
+```js
+const { isNil } = require('@wizhut_tech/wizjs/lang/checks');
+const { Counter } = require('@wizhut_tech/wizjs/lang/collections');
+const { clamp } = require('@wizhut_tech/wizjs/math/numbers');
+```
+
+Every area listed below is reachable as `@wizhut_tech/wizjs/<namespace>/<area>`.
+The subpath form needs Node 14.13 or newer.
+
+The whole library is also available from a single root import --
+`const wizjs = require('@wizhut_tech/wizjs')` -- which returns an object
+structured like:
 
 ```
 {
@@ -23,28 +34,21 @@ Use by importing:
     },
     math: {
         numbers: [functions]
+    },
+    exceptions: {
+        BadlyInitializedError
     }
 }
 ```
 
-You can also import individual functions from that root object:
+Individual functions can be destructured out of that as well, though it nests
+three levels deep:
 
 `const { lang: { checks : { isNil } } }  = require('@wizhut_tech/wizjs');`
 
-Or require a single namespace area directly, which keeps the destructuring flat
-when you need helpers from more than one area:
-
-```js
-const { isNil } = require('@wizhut_tech/wizjs/lang/checks');
-const { Counter } = require('@wizhut_tech/wizjs/lang/collections');
-const { clamp } = require('@wizhut_tech/wizjs/math/numbers');
-```
-
-Every area listed below is reachable as `@wizhut_tech/wizjs/<namespace>/<area>`,
-and resolves to the very same object the root import exposes, so the two styles
-mix freely. The subpath form needs Node 14.13 or newer. Library internals (under
-`src/internal/`) are deliberately not reachable this way — `BadlyInitializedError`
-is re-exported from the root import instead.
+Both forms hand back the same objects, so they mix freely. Library internals
+(under `src/internal/`) are deliberately not reachable as subpaths --
+`BadlyInitializedError` is re-exported from the root import instead.
 
 ### I/O
 
