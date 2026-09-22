@@ -18,12 +18,24 @@ t.test('files/loadFully returns null when the path is a directory', async (t) =>
 });
 
 
-t.test('files/loadFully reads an existing file without throwing', async (t) => {
+t.test('files/loadFully returns the whole file as text', async (t) => {
     const dir = t.testdir({ 'hello.txt': 'contents\n' });
 
-    // NOTE: the resolved value is deliberately not asserted here. loadFully
-    // reads the file but never returns what it read, so on success it always
-    // resolves to undefined -- see src/io/files.js. Pinning that down in a
-    // test would enshrine the bug; this case covers the read path only.
-    await t.resolves(loadFully(path.join(dir, 'hello.txt')));
+    t.equal(await loadFully(path.join(dir, 'hello.txt')), 'contents\n');
+});
+
+
+t.test('files/loadFully returns an empty string for an empty file', async (t) => {
+    const dir = t.testdir({ 'empty.txt': '' });
+
+    t.equal(await loadFully(path.join(dir, 'empty.txt')), '',
+        'an empty file is distinguishable from a failed read');
+});
+
+
+t.test('files/loadFully preserves multi-line and unicode content', async (t) => {
+    const body = 'first\nsecond\n\u03b1\u03b2\u03b3\n';
+    const dir = t.testdir({ 'multi.txt': body });
+
+    t.equal(await loadFully(path.join(dir, 'multi.txt')), body);
 });
