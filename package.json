@@ -7,6 +7,19 @@
   "devDependencies": {
     "tap": "21.7.5"
   },
+  "engines": {
+    "node": ">=14.13.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./io/*": "./src/io/*.js",
+    "./io/*.js": "./src/io/*.js",
+    "./lang/*": "./src/lang/*.js",
+    "./lang/*.js": "./src/lang/*.js",
+    "./math/*": "./src/math/*.js",
+    "./math/*.js": "./src/math/*.js",
+    "./package.json": "./package.json"
+  },
   "homepage": "https://github.com/wizhut/wizjs#readme",
   "keywords": [
     "javascript",

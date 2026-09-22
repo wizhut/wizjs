@@ -27,9 +27,24 @@ Use by importing:
 }
 ```
 
-You can also import individual functions like the following snippet:
+You can also import individual functions from that root object:
 
 `const { lang: { checks : { isNil } } }  = require('@wizhut_tech/wizjs');`
+
+Or require a single namespace area directly, which keeps the destructuring flat
+when you need helpers from more than one area:
+
+```js
+const { isNil } = require('@wizhut_tech/wizjs/lang/checks');
+const { Counter } = require('@wizhut_tech/wizjs/lang/collections');
+const { clamp } = require('@wizhut_tech/wizjs/math/numbers');
+```
+
+Every area listed below is reachable as `@wizhut_tech/wizjs/<namespace>/<area>`,
+and resolves to the very same object the root import exposes, so the two styles
+mix freely. The subpath form needs Node 14.13 or newer. Library internals (under
+`src/internal/`) are deliberately not reachable this way — `BadlyInitializedError`
+is re-exported from the root import instead.
 
 ### I/O
 
