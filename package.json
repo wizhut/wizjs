@@ -5,7 +5,7 @@
   },
   "description": "Simple but useful hacks for everyday javascript programming",
   "devDependencies": {
-    "tap": "21.7.5"
+    "tap": "21.8.0"
   },
   "engines": {
     "node": ">=14.13.0"
