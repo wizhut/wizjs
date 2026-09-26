@@ -29,6 +29,10 @@
   ],
   "license": "MIT",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "src/"
+  ],
   "name": "@wizhut_tech/wizjs",
   "repository": {
     "type": "git",

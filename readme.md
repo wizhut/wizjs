@@ -1,6 +1,6 @@
 # Wizjs
 
-A Javascript library that ports selected Python idioms and stdlib helpers (`itertools`, `functools`, `collections`) to everyday JS. A few selected dependencies only. No, this library will not become another `lodash` :).
+A Javascript library that ports selected Python idioms and stdlib helpers (`itertools`, `functools`, `collections`) to everyday JS. No runtime dependencies. No, this library will not become another `lodash` :).
 
 Use by importing the area you need:
 
@@ -52,22 +52,22 @@ Both forms hand back the same objects, so they mix freely. Library internals
 
 ### I/O
 
-* **Files** utility functions ... [[docs](docs/io_files.md)]
+* **Files** utility functions ... [[docs](https://github.com/wizhut/wizjs/blob/main/docs/io_files.md)]
 
 ### Language
 
-* **Arrays** utility functions ... [[docs](docs/lang_arrays.md)]
-* **Check** utility functions ... [[docs](docs/lang_checks.md)]
-* Control-**Flow** utilities ... [[docs](docs/lang_flow.md)]
-* **functools** ... [[docs](docs/lang_functools.md)]
-* **itertools** ... [[docs](docs/lang_itertools.md)]
-* **Objects** utility functions ... [[docs](docs/lang_objects.md)]
-* **collections** (`Counter`, `DefaultDict`) ... [[docs](docs/lang_collections.md)]
-* **Singleton** hack ... [[docs](docs/lang_singleton.md)]
+* **Arrays** utility functions ... [[docs](https://github.com/wizhut/wizjs/blob/main/docs/lang_arrays.md)]
+* **Check** utility functions ... [[docs](https://github.com/wizhut/wizjs/blob/main/docs/lang_checks.md)]
+* Control-**Flow** utilities ... [[docs](https://github.com/wizhut/wizjs/blob/main/docs/lang_flow.md)]
+* **functools** ... [[docs](https://github.com/wizhut/wizjs/blob/main/docs/lang_functools.md)]
+* **itertools** ... [[docs](https://github.com/wizhut/wizjs/blob/main/docs/lang_itertools.md)]
+* **Objects** utility functions ... [[docs](https://github.com/wizhut/wizjs/blob/main/docs/lang_objects.md)]
+* **collections** (`Counter`, `DefaultDict`) ... [[docs](https://github.com/wizhut/wizjs/blob/main/docs/lang_collections.md)]
+* **Singleton** hack ... [[docs](https://github.com/wizhut/wizjs/blob/main/docs/lang_singleton.md)]
 
 ### Math
 
-* Utilities around **numbers** ... [[docs](docs/math_numbers.md)]
+* Utilities around **numbers** ... [[docs](https://github.com/wizhut/wizjs/blob/main/docs/math_numbers.md)]
 
 ## Contact
 
